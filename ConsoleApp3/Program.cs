@@ -10,21 +10,37 @@ namespace ConsoleApp3
     {
         static void Main(string[] args)
         {
-            int nota1, nota2, nota3, nota4;
-            double promedio;
+            float nota1, nota2, nota3, nota4, promedio;
 
             Console.WriteLine("ingrese primera nota: ");
+            nota1 = float.Parse(Console.ReadLine());
 
             Console.WriteLine("ingrese segunda nota: ");
+            nota2 = float.Parse(Console.ReadLine());
 
             Console.WriteLine("ingrese tercera nota: ");
+            nota3 = float.Parse(Console.ReadLine());
 
             Console.WriteLine("ingrese cuarta nota: ");
+            nota4 = float.Parse(Console.ReadLine());
 
-            promedio=( nota1*0.10 + nota2*0.20 + nota3*0.30 + nota40.4)
+            promedio = (float)((nota1 * 0.10 + nota2 * 0.20 + nota3 * 0.30 + nota4 * 0.40));
 
-                if (promedio>=12)
-                Console.WriteLine("el alumno aprobo")
+            Console.WriteLine("promedio: " + promedio);
+
+            if (promedio >= 11.5)
+            {
+
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("el alumno aprobo");
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("el alumno reprobo");
+
+            }
+            Console.ForegroundColor = ConsoleColor.Gray;
         }
     }
 }
